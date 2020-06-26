@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <input type="text" id="nome">
+    <button onClick="adicionar()">Adicionar</button>
+    <div id="app"></div>
+
+    <script>
+        var nomes = ['Diego', 'Gabriel', 'Lucas'];
+        //var btnElement = document.querySelector('button.btn');
+
+        function adicionar() {
+            var inputElement = document.querySelector("#nome").value;
+            //nomes = inputElement;
+            nomes.push(inputElement);
+            document.querySelector('#app').innerHTML = ""; // esvazia a div
+            document.querySelector('#app').appendChild(list(nomes));
+        }
+
+        function list(array) {
+            //Cria a lista do elemento
+            var listElement = document.createElement("ul");
+
+            //listElement.setAttribute('id', 'myList');
+
+            for (var i = 0; i < array.length; i++) {
+                //Cria a lista de item
+                var itemElement = document.createElement('li');
+
+                //Defini seu conteudo
+                itemElement.appendChild(document.createTextNode(array[i]));
+
+                //Adiciona um item a lista
+                listElement.appendChild(itemElement);
+            }
+            return listElement;
+        }
+
+        // Add the contents of options[0] to #foo:
+        document.querySelector('#app').appendChild(list(nomes));
+
+    </script>
+</body>
+
+</html>

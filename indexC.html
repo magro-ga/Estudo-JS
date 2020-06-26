@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <script>
+        //sempre trabalhar com número em oprações matemáticas
+
+        function showMyObj(aUsers) {
+            for (var habils of aUsers) {
+                console.log('O ' + habils.nome + ' possui as habilidades ' + habils.habilidades.join(", ") + ".");
+            }
+        };
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redix"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+        var teste = showMyObj(usuarios);
+    </script>
+</body>
+
+</html>

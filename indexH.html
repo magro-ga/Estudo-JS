@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <div id="app">
+        <button id="btnCriar" onclick="myFunction()">Quad Vermelho</button>
+    </div>
+
+    <script>
+        var btnCriar = document.querySelector('#btnCriar');
+        btncriar.style.width = 100;
+        btnCriar.style.height = 100;
+
+        function myFunction(){
+            let boxElement = document.createElement("div");
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#f00';
+
+            boxElement.classList.add('box');
+            document.body.appendChild(boxElement);
+        }
+    </script>
+</body>
+
+</html>
